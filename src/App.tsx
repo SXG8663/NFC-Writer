@@ -346,9 +346,9 @@ export default function App() {
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname.toLowerCase();
 
-      // Canonical redirect: route root domain to www subdomain so storage and PWA cache are unified
-      if (hostname === 'nfc.aiue.se') {
-        window.location.replace(`https://www.nfc.aiue.se${window.location.pathname}${window.location.search}${window.location.hash}`);
+      // Canonical redirect: route www subdomain to root domain so storage and PWA cache are unified
+      if (hostname === 'www.nfc.aiue.se') {
+        window.location.replace(`https://nfc.aiue.se${window.location.pathname}${window.location.search}${window.location.hash}`);
         return;
       }
 
@@ -632,7 +632,7 @@ export default function App() {
         {/* Unified Frame Footer */}
         <footer className="pt-12 pb-4 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
           <div>
-            &copy; 2026 NFC Writer. Hosted at: <a href="https://www.nfc.aiue.se/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-400 font-mono">https://www.nfc.aiue.se/</a>
+            &copy; 2026 NFC Writer. Hosted at: <a href="https://nfc.aiue.se/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-400 font-mono">https://nfc.aiue.se/</a>
           </div>
           <div className="flex items-center gap-3">
             <span>Version v1.1.20 (Production)</span>

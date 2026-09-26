@@ -1,13 +1,12 @@
 # NFC Writer — Contactless NDEF Developer Suite Pro (v1.1.20)
 
-URL: [https://nfc.aiue.se/](https://nfc.aiue.se/)
-
-> [!WARNING]  
-> **Forking, Hosting & Licensing Notice:** This repository is protected under a proprietary **Source-Available & Domain-Restricted License**. While you are free to fork, view, and run this code **locally** for personal, educational, or development purposes, **public hosting, deployment, or mirroring of this application on any public domain other than `nfc.aiue.se` or `www.nfc.aiue.se` is strictly prohibited**. All forks and derivative works are legally required to keep all original copyright notices, license files, and author attributions completely intact.
+Official Website: [https://nfc.aiue.se/](https://nfc.aiue.se/)
 
 NFC Writer is a production-grade, highly optimized Progressive Web Application (PWA) designed for scanning, programming, formatting, and analyzing Near Field Communication (NFC) RFID transponders operating under the High-Frequency (HF) 13.56 MHz band.
 
-This application is built entirely client-side using **React 18**, **Vite**, and **Tailwind CSS v4** to deliver near-instantaneous offline operations, responsive telemetry, and highly precise NDEF structure representation.
+Built entirely client-side using **React 18**, **Vite**, and **Tailwind CSS v4**, the suite delivers near-instantaneous offline operations, responsive telemetry, and precise NDEF record compilation without transmitting user data to external servers.
+
+> **License & Usage Notice:** This repository is provided under a source-available, domain-restricted license. You are welcome to fork, examine, and run this code locally for personal, educational, or development purposes. Public deployment, hosting, or mirroring on domains other than `nfc.aiue.se` or `www.nfc.aiue.se` is restricted without explicit written permission. All forks and distributions must retain original author attributions and copyright notices.
 
 ---
 
@@ -15,15 +14,15 @@ This application is built entirely client-side using **React 18**, **Vite**, and
 
 ### The Challenge of Native Web NFC
 The native **W3C Web NFC API** allows web applications to read and write Near Field Communication (NFC) tags. However, the standard is heavily sandboxed and restricted by modern browser vendors:
-1. **Device Compatibility:** It is exclusively supported on **Google Chrome, Opera, and Microsoft Edge for Android**.
-2. **Desktop & Apple iOS Constraints:** Desktop operating systems (macOS, Windows, Linux) do not expose NFC reader chips to browsers. Furthermore, Apple iOS restricts native browser access to the device NFC controller, reserving core RFID access for native App Store applications.
+1. **Device Compatibility:** It is supported on **Google Chrome, Opera, and Microsoft Edge for Android**.
+2. **Desktop & Apple iOS Constraints:** Desktop operating systems (macOS, Windows, Linux) do not expose NFC controller hardware to browser engines. Apple iOS restricts native browser access to the device NFC controller, reserving core RFID access for native App Store applications.
 3. **Context Security:** Web NFC will only compile and execute under secure cryptographic **HTTPS** origins.
 
 ---
 
 ## Comprehensive Feature Set (11-Point Matrix)
 
-NFC Writer fully implements and documents the maximum bounds of web-accessible RFID capabilities:
+NFC Writer implements and documents the maximum bounds of web-accessible RFID capabilities:
 
 1. **Read NFC Tags (NDEF Parsing):** High-fidelity, real-time reader parses physical NDEF records and extracts plain text, web URLs, phone directory sequences (`tel:`), email structures, SMS drafts, Wi-Fi configurations, and raw JSON payloads.
 2. **Write NFC Tags (NDEF Encoding):** Custom programmer compiles inputs into standardized NDEF byte streams, writing them directly to the contactless chip.
@@ -41,21 +40,21 @@ NFC Writer fully implements and documents the maximum bounds of web-accessible R
 
 ## Technical Architecture & Project Structure
 
-The codebase is engineered with high modularity and robust separation of concerns:
+The codebase is engineered with high modularity and clean separation of concerns:
 
-- `/src/main.tsx`: Entry point. Registers the Progressive Web App (PWA) Service Worker, setting up automated background updates.
-- `/src/components/ReadView.tsx`: Real-time Web NFC scanner, complete with Hex-dumps, record parsing, and telemetry diagnostics.
-- `/src/components/WriteView.tsx`: Core NDEF programmer. Offers 11 distinct input types and preset template loading.
+- `/src/main.tsx`: Application entry point. Registers the Progressive Web App (PWA) Service Worker, setting up automated background updates.
+- `/src/components/ReadView.tsx`: Real-time Web NFC scanner, complete with Hex dumps, record parsing, and telemetry diagnostics.
+- `/src/components/WriteView.tsx`: Core NDEF programmer offering 11 distinct input types and preset template loading.
 - `/src/components/ToolsView.tsx`: Advanced utility toolkit for developers, including SSID encryption generators, vCard builders, and URL shorteners.
 - `/src/components/DocumentationView.tsx`: Centralized developer guide outlining chip architectures, protocol limits, and Web NFC specifications.
 - `/src/data.ts`: Shared constants, utility string generators, and the 20 precompiled NFC templates.
-- `/public/sw.js`: Custom Service Worker. Configured with a robust **Network-First offline-fallback pipeline** to ensure live assets are prioritized while maintaining 100% offline functionality.
+- `/public/sw.js`: Custom Service Worker configured with a robust **Network-First offline-fallback pipeline** to ensure live assets are prioritized while maintaining 100% offline functionality.
 
 ---
 
 ## Local Development & Deployment
 
-Run this application locally or deploy it to any static web server:
+Run this application locally or compile it for deployment:
 
 ```bash
 # 1. Install dependencies
@@ -71,7 +70,7 @@ npm run build
 npm run lint
 ```
 
-Upon executing `npm run build`, all compiled static assets, the web app manifest, icon sets, and the active service worker are generated inside the `/dist` directory. This directory is 100% self-contained and ready to be hosted at [https://nfc.aiue.se/](https://nfc.aiue.se/).
+Upon executing `npm run build`, all compiled static assets, the web app manifest, icon sets, and the active service worker are generated inside the `/dist` directory. This directory is self-contained and ready for static hosting at [https://nfc.aiue.se/](https://nfc.aiue.se/).
 
 ---
 
@@ -86,10 +85,9 @@ NFC Writer is designed with a strict zero-trust privacy model:
 
 ## License & Attribution
 
-This software is released under a proprietary **Source-Available & Domain-Restricted License**. 
+This software is released under a proprietary **Source-Available & Domain-Restricted License**.
 
 - **Copyright:** Copyright (c) 2026 SouumG. All rights reserved.
 - **Viewing and Local Use:** You are free to view, download, fork, and run the source code locally for personal, educational, or evaluation purposes.
-- **Hosting Restriction:** Public hosting, deployment, or mirroring of this application on any public domain other than `nfc.aiue.se` or `www.nfc.aiue.se` is strictly prohibited unless prior explicit written permission is granted by the copyright holder.
+- **Hosting Restriction:** Public hosting, deployment, or mirroring of this application on any public domain other than `nfc.aiue.se` or `www.nfc.aiue.se` is prohibited unless prior explicit written permission is granted by the copyright holder.
 - **Attribution:** Any fork, permitted distribution, or derivative work must preserve all copyright notices, author attributions, and direct links back to the original author **SouumG** on GitHub.
-

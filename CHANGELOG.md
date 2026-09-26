@@ -5,21 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.20] - 2026-09-18
+## [1.1.20] - 2026-09-26
 
 ### Added
-- **Canonical Domain Redirect**: Added an immediate canonical redirect from root domain `nfc.aiue.se` to `www.nfc.aiue.se` in both `index.html` (pre-execution script) and `src/App.tsx` (client route initialization).
-- **Unified Browser Storage & Persistence**: Consolidated the application origin to `www.nfc.aiue.se` so all preferences, accent color configurations, custom templates, scan histories, and offline PWA service worker caches remain unified and persistent without origin fragmentation.
-- **Dual Hash & Path Route Resolution**: Enhanced `src/App.tsx` routing engine to seamlessly resolve both clean pathnames (`/read`, `/write`, `/templates`, `/tools`, `/history`, `/settings`, `/help`, `/documentation`, `/about`, `/legal`) and hash anchors.
+- **Canonical Root Domain Migration (`nfc.aiue.se`)**: Transitioned primary canonical URL, robots.txt, sitemap, OpenGraph tags, Twitter cards, and Schema.org `WebApplication` structured data blocks from `www.nfc.aiue.se` to root domain `nfc.aiue.se`.
+- **Automatic Client-Side Redirection**: Configured an immediate client-side redirect routing `www.nfc.aiue.se` visitors to root domain `nfc.aiue.se` across both `index.html` (pre-execution script) and `src/App.tsx` (application router initialization).
+- **Dual Hash & Path Route Resolution**: Enhanced `src/App.tsx` routing engine to seamlessly resolve both clean pathnames (`/read`, `/write`, `/templates`, `/tools`, `/history`, `/settings`, `/help`, `/documentation`, `/about`, `/legal`) and traditional hash anchors.
 - **Dynamic SEO Page Titles**: Configured dynamic document `<title>` updates corresponding to active application routes for enhanced search indexing.
-- **OpenGraph & Schema.org Structured Metadata**: Integrated canonical `<link rel="canonical">`, OpenGraph tags, Twitter cards, and Schema.org `WebApplication` JSON-LD structured data into `index.html`.
+- **Unified Browser Storage & Persistence**: Consolidated the application origin to `nfc.aiue.se` so all preferences, accent color configurations, custom templates, scan histories, and offline PWA service worker caches remain unified and persistent without origin fragmentation.
 
 ### Fixed
 - **Google Search Console Sitemap Compatibility**: Fixed sitemap readability errors in Google Search Console by removing all URL fragment identifiers (`#`) from `public/sitemap.xml`, which are prohibited by Google and the Sitemaps XML protocol.
-- **Canonical Origin Alignment in Sitemap & Robots**: Updated all sitemap `<loc>` URLs and `robots.txt` Sitemap directive to canonical `https://www.nfc.aiue.se/` to prevent cross-subdomain and redirection parsing rejections in GSC.
-- **W3C Datetime Freshness**: Updated sitemap `<lastmod>` timestamps to current release date (`2026-09-18`).
+- **Canonical Origin Alignment in Sitemap & Robots**: Realigned all 11 XML sitemap `<loc>` endpoints and `robots.txt` Sitemap directives to `https://nfc.aiue.se/`, resolving domain mismatch warnings and DNS resolution delays in Google Search Console.
+- **W3C Datetime Synchronization**: Bumped all sitemap `<lastmod>` timestamps to current release date (`2026-09-26`).
 
 ### Changed
+- **README Presentation & Harmonized License Notice**: Redesigned documentation presentation for improved reader flow and professional tone. Softened the license and hosting restriction notice into an integrated advisory note while retaining all legal bounds regarding authorized domains, forking, and attribution.
 - **Synchronized Release Footprint**: Version set to `1.1.20` across `package.json`, `public/sw.js`, `README.md`, `CHANGELOG.md`, `src/App.tsx`, `src/components/HomeView.tsx`, and `src/components/AboutView.tsx`.
 
 ## [1.1.19] - 2026-08-22

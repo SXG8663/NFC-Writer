@@ -56,16 +56,15 @@ export default function AboutView() {
               <div className="space-y-2 bg-blue-500/5 border border-blue-500/20 p-4 rounded-lg">
                 <div className="flex items-center gap-2 pb-1 border-b border-blue-500/10">
                   <span className="font-bold text-xs text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded border border-blue-500/30">v1.1.20</span>
-                  <span className="text-xs text-gray-200 font-bold uppercase">• Canonical Domain Redirect, GSC Sitemap &amp; Shared Storage</span>
+                  <span className="text-xs text-gray-200 font-bold uppercase">• Canonical Root Domain, GSC Sitemap, SEO Schema &amp; Refined Docs</span>
                 </div>
                 <ul className="list-disc pl-5 text-gray-300 text-[11px] space-y-1.5 leading-relaxed pt-1">
-                  <li><strong>Canonical Domain Redirect:</strong> Added pre-execution script in index.html to route nfc.aiue.se visitors immediately to canonical www.nfc.aiue.se.</li>
-                  <li><strong>Unified Browser Storage:</strong> Consolidated local storage, scan histories, custom templates, and PWA caches under a single origin.</li>
-                  <li><strong>GSC Sitemap Specification Compliance:</strong> Eliminated all fragment identifiers (&lsquo;#&rsquo;) from sitemap.xml, resolving Google Search Console parse errors.</li>
-                  <li><strong>Canonical Subdomain Alignment:</strong> Updated all sitemap &lt;loc&gt; paths and robots.txt directives to canonical https://www.nfc.aiue.se/, preventing cross-subdomain rejections.</li>
-                  <li><strong>Dual Hash &amp; Path Route Support:</strong> Enhanced router to parse clean pathnames (/read, /write, /templates, /tools, etc.) alongside hash navigation.</li>
-                  <li><strong>Dynamic SEO Page Titles &amp; Schema:</strong> Added reactive &lt;title&gt; updates for each tool view, plus OpenGraph, Twitter card, and Schema.org WebApplication JSON-LD.</li>
-                  <li><strong>Synchronized Release Footprint:</strong> Version synchronized to v1.1.20 across package.json, PWA service worker cache, README.md, CHANGELOG.md, and all UI views.</li>
+                  <li><strong>Canonical Root Domain Migration:</strong> Shifted primary canonical URL and hosting baseline to root domain nfc.aiue.se with automatic www-to-root redirection.</li>
+                  <li><strong>Google Search Console Sitemap Compliance:</strong> Converted all sitemap endpoints to clean path routes without fragment identifiers (#) and aligned canonical directives in robots.txt.</li>
+                  <li><strong>Dual Hash &amp; Path Route Resolution:</strong> Enhanced routing engine to resolve clean paths (/read, /write, /templates, etc.) alongside hash routes with reactive document titles.</li>
+                  <li><strong>Unified Browser Storage &amp; Persistence:</strong> Consolidated local storage, scan histories, custom templates, and PWA caches under the unified root domain origin.</li>
+                  <li><strong>README Presentation &amp; Balanced License:</strong> Redesigned repository documentation to highlight Web NFC capabilities and architecture with a balanced, integrated source-available license notice.</li>
+                  <li><strong>Synchronized Release Footprint:</strong> Version synchronized to v1.1.20 across package.json, service worker cache, README.md, CHANGELOG.md, and all UI views.</li>
                 </ul>
               </div>
 
