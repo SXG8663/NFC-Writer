@@ -1,14 +1,10 @@
 forked from https://github.com/SouumG/NFC-Writer
 
-# NFC Writer — Contactless NDEF Developer Suite Pro (v1.1.20)
-
-Official Website: [https://nfc.aiue.se/](https://nfc.aiue.se/)
+[https://nfc.aiue.se/](https://nfc.aiue.se/)
 
 NFC Writer is a production-grade, highly optimized Progressive Web Application (PWA) designed for scanning, programming, formatting, and analyzing Near Field Communication (NFC) RFID transponders operating under the High-Frequency (HF) 13.56 MHz band.
 
 Built entirely client-side using **React 18**, **Vite**, and **Tailwind CSS v4**, the suite delivers near-instantaneous offline operations, responsive telemetry, and precise NDEF record compilation without transmitting user data to external servers.
-
-> **License & Usage Notice:** This repository is provided under a source-available, domain-restricted license. You are welcome to fork, examine, and run this code locally for personal, educational, or development purposes. Public deployment, hosting, or mirroring on domains other than `nfc.aiue.se` or `www.nfc.aiue.se` is restricted without explicit written permission. All forks and distributions must retain original author attributions and copyright notices.
 
 ---
 
