@@ -8,16 +8,6 @@ Built entirely client-side using **React 18**, **Vite**, and **Tailwind CSS v4**
 
 ---
 
-## The Web NFC API & Hardware Compatibility
-
-### The Challenge of Native Web NFC
-The native **W3C Web NFC API** allows web applications to read and write Near Field Communication (NFC) tags. However, the standard is heavily sandboxed and restricted by modern browser vendors:
-1. **Device Compatibility:** It is supported on **Google Chrome, Opera, and Microsoft Edge for Android**.
-2. **Desktop & Apple iOS Constraints:** Desktop operating systems (macOS, Windows, Linux) do not expose NFC controller hardware to browser engines. Apple iOS restricts native browser access to the device NFC controller, reserving core RFID access for native App Store applications.
-3. **Context Security:** Web NFC will only compile and execute under secure cryptographic **HTTPS** origins.
-
----
-
 ## Comprehensive Feature Set (11-Point Matrix)
 
 NFC Writer implements and documents the maximum bounds of web-accessible RFID capabilities:
