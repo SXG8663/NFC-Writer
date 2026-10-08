@@ -1,7 +1,10 @@
 forked from https://github.com/SouumG/NFC-Writer
----
+
+
 [https://nfc.aiue.se/](https://nfc.aiue.se/)
----
+
+
+
 NFC Writer is a production-grade, highly optimized Progressive Web Application (PWA) designed for scanning, programming, formatting, and analyzing Near Field Communication (NFC) RFID transponders operating under the High-Frequency (HF) 13.56 MHz band.
 
 Built entirely client-side using **React 18**, **Vite**, and **Tailwind CSS v4**, the suite delivers near-instantaneous offline operations, responsive telemetry, and precise NDEF record compilation without transmitting user data to external servers.
@@ -37,45 +40,3 @@ The codebase is engineered with high modularity and clean separation of concerns
 - `/src/components/DocumentationView.tsx`: Centralized developer guide outlining chip architectures, protocol limits, and Web NFC specifications.
 - `/src/data.ts`: Shared constants, utility string generators, and the 20 precompiled NFC templates.
 - `/public/sw.js`: Custom Service Worker configured with a robust **Network-First offline-fallback pipeline** to ensure live assets are prioritized while maintaining 100% offline functionality.
-
----
-
-## Local Development & Deployment
-
-Run this application locally or compile it for deployment:
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Boot local development server (binds automatically to port 3000)
-npm run dev
-
-# 3. Compile and bundle optimized, production-ready static assets
-npm run build
-
-# 4. Run TypeScript syntax and static linter checks
-npm run lint
-```
-
-Upon executing `npm run build`, all compiled static assets, the web app manifest, icon sets, and the active service worker are generated inside the `/dist` directory. This directory is self-contained and ready for static hosting at [https://nfc.aiue.se/](https://nfc.aiue.se/).
-
----
-
-## Security & Privacy Policy
-
-NFC Writer is designed with a strict zero-trust privacy model:
-- **100% Client-Side:** No databases, background APIs, or telemetry log servers are implemented.
-- **No Third-Party Cookies:** Zero tracking scripts, trackers, or marketing pixels are loaded.
-- **Secure Storage:** All scanned tags, saved template directories, and activity logs reside strictly inside the browser's sandboxed `LocalStorage` client-side cache and never leave your device.
-
----
-
-## License & Attribution
-
-This software is released under a proprietary **Source-Available & Domain-Restricted License**.
-
-- **Copyright:** Copyright (c) 2026 SouumG. All rights reserved.
-- **Viewing and Local Use:** You are free to view, download, fork, and run the source code locally for personal, educational, or evaluation purposes.
-- **Hosting Restriction:** Public hosting, deployment, or mirroring of this application on any public domain other than `nfc.aiue.se` or `www.nfc.aiue.se` is prohibited unless prior explicit written permission is granted by the copyright holder.
-- **Attribution:** Any fork, permitted distribution, or derivative work must preserve all copyright notices, author attributions, and direct links back to the original author **SouumG** on GitHub.
