@@ -1,5 +1,5 @@
 forked from https://github.com/SouumG/NFC-Writer
--
+---------
 
 
 NFC Writer is a production-grade, highly optimized Progressive Web Application (PWA) designed for scanning, programming, formatting, and analyzing Near Field Communication (NFC) RFID transponders operating under the High-Frequency (HF) 13.56 MHz band.
